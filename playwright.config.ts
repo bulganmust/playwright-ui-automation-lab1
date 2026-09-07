@@ -5,11 +5,11 @@ export default defineConfig({
 
   fullyParallel: true,
 
-  reporter: 'html',
+  reporter: [['html', { open: 'never' }]],
 
   use: {
     baseURL: 'https://www.saucedemo.com',
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
   },
 
   projects: [
