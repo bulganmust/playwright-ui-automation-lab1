@@ -10,6 +10,8 @@ test('1. Амжилттай нэвтрэх', async ({ page }) => {
 
   // Нэвтэрсний дараа Products хуудас гарч байгааг шалгана
   await expect(page.getByText('Products')).toBeVisible();
+  await page.getByRole('button', { name: 'Open Menu' }).click();
+await page.getByRole('link', { name: 'Logout' }).click();
 });
 
 // Тест 2: Буруу нууц үгээр нэвтрэхэд алдааны мессеж гарч байгааг шалгана
@@ -40,4 +42,6 @@ test('3. Бараа сагсанд нэмэх', async ({ page }) => {
 
   // Сагсны badge дээр тоо "1" болсныг шалгана (getByTestId ашиглав, CSS selector биш)
   await expect(page.getByTestId('shopping-cart-badge')).toHaveText('1');
+  await page.getByRole('button', { name: 'Open Menu' }).click();
+await page.getByRole('link', { name: 'Logout' }).click();
 });
