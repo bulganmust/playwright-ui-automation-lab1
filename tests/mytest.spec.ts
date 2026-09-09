@@ -43,5 +43,5 @@ test('3. Бараа сагсанд нэмэх', async ({ page }) => {
   // Сагсны badge дээр тоо "1" болсныг шалгана (getByTestId ашиглав, CSS selector биш)
   await expect(page.getByTestId('shopping-cart-badge')).toHaveText('1');
   await page.getByRole('button', { name: 'Open Menu' }).click();
-await page.getByRole('link', { name: 'Logout' }).click();
+  await page.getByRole('link', { name: 'Logout' }).click();
 });
